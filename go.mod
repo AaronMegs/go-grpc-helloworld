@@ -1,4 +1,4 @@
-module go-grpc-helloworld
+module github.com/aaronmegs/go-grpc-helloworld
 
 go 1.16
 
