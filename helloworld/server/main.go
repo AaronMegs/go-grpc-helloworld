@@ -20,8 +20,13 @@ type server struct {
 
 // SayHello implements portos.GreeterServer
 func (s *server) SayHello(ctx context.Context, in *pb.HelloRequest) (*pb.HelloReply, error) {
-	log.Printf("Received: %v", in.GetName)
+	log.Printf("Received: %v", in.GetName())
 	return &pb.HelloReply{Message: "Hello " + in.GetName()}, nil
+}
+
+func (s *server) SayHelloAgain(ctx context.Context, in *pb.HelloRequest) (*pb.HelloReply, error) {
+	log.Printf("Received again: %v", in.GetName())
+	return &pb.HelloReply{Message: "Hello Again " + in.GetName()}, nil
 }
 
 func main() {

@@ -7,6 +7,9 @@ package protos;
 service  Greeter {
   // Sends a greeting
   rpc SayHello(HelloRequest) returns (HelloReply) {}
+
+  // Send again
+  rpc SayHelloAgain(HelloRequest) returns (HelloReply) {}
 }
 
 // The request message containing the user's name
