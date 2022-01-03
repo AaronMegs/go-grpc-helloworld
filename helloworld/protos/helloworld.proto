@@ -1,8 +1,9 @@
 syntax = "proto3";
 
 option go_package = "github.com/aaronmegs/go-grpc-helloworld/helloword/protos";
+//option go_package = "./";
 
-package helloworld;
+package protos;
 // The greeting service definition
 service  Greeter {
   // Sends a greeting
